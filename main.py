@@ -39,7 +39,13 @@ def get_message():#henry
     #accepts no arguemtns
     #it ask the user for a message
     #and retruns it
-    pass
+    
+    #input
+    message = str(input('Enter a message to encode or decode: '))
+    print()
+    
+    #return
+    return message
 
 def create_key(shift): #tate
     #accepts shift for the argument
