@@ -4,7 +4,7 @@ Created by Tate Basham and Henry Baier
 ## Caesar Cipher Description
 It requests a message to encode/decode, which will use a caesar cipher to do so.
 
-### <program_name> Flowchart
+### Caesar Cipher Flowchart
 ```mermaid
 graph TD;
   main-->get_shift;
