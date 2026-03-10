@@ -8,7 +8,24 @@ def get_shift(): #henry
     #accepts no arguments
     #it ask the user for how much to shift
     #and returns that
-    pass
+    
+    #loop and variables
+    valid = 'n'
+    while valid == 'n':
+    
+        try:
+                
+            shift = int(input('Enter a number form 1-25 for your encoding shift value: '))
+            print()
+                
+            #validation
+            if shift < 25 :
+                valid = 'y'
+                return shift
+            
+        except ValueError:
+            print('Error try')
+            valid = 'n'
 
 def choose_option():#tate
     #accepts no arguments
