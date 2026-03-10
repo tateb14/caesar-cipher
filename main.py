@@ -19,7 +19,24 @@ def get_shift(): #henry
     #accepts no arguments
     #it ask the user for how much to shift
     #and returns that
-    pass
+    
+    #loop and variables
+    valid = 'n'
+    while valid == 'n':
+    
+        try:
+                
+            shift = int(input('Enter a number form 1-25 for your encoding shift value: '))
+            print()
+                
+            #validation
+            if shift < 25 :
+                valid = 'y'
+                return shift
+            
+        except ValueError:
+            print('Error try')
+            valid = 'n'
 
 def choose_option():#tate
     #accepts no arguments
@@ -44,7 +61,13 @@ def get_message():#henry
     #accepts no arguemtns
     #it ask the user for a message
     #and retruns it
-    pass
+    
+    #input
+    message = str(input('Enter a message to encode or decode: '))
+    print()
+    
+    #return
+    return message
 
 def create_key(shift): #tate
     #accepts shift for the argument
@@ -92,7 +115,20 @@ def encode(message, key):#henry
     #it accepts message and key
     #according to the message and the key
     #and encodes it
-    pass
+    
+    #variable
+    string = ''
+    
+    #start loop
+    for letter in key:
+        key.get(letter)
+        string += 'blah'
+        
+    print(string)
+        
+        
+    
+    
 
 def decode(message, key):#tate
     #it accepts message and key
