@@ -56,7 +56,20 @@ def encode(message, key):#henry
     #it accepts message and key
     #according to the message and the key
     #and encodes it
-    pass
+    
+    #variable
+    string = ''
+    
+    #start loop
+    for letter in key:
+        key.get(letter)
+        string += 'blah'
+        
+    print(string)
+        
+        
+    
+    
 
 def decode(message, key):#tate
     #it accepts message and key
