@@ -52,7 +52,7 @@ graph TD;
 | `message:str`     | encodes the message as a string using the key   | outputs encoded_message          |
 | `message:str`      |  | returns encoded_message |
 
-| `decode`    |               |    Henry B.   |
+| `decode`    |               |    Tate B.   |
 | ------------------ | ------------- | ------------ |
 | `argument:message, key`    |accepts message and key  |              |
 | `message:str`     | decodes the message as a string using the key   | outputs decoded_message          |
