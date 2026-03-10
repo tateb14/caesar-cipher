@@ -21,7 +21,7 @@ graph TD;
 | `argument:type`    | calls functions  |              |
 | `time:integer`     |   | outputs n/a             |
 | `name:string`      |  | returns n/a |
-***
+
 | `get_shift`    |               |     Henry B.   |
 | ------------------ | ------------- | ------------ |
 | `argument:none`    | prompts the user for a shift value  |              |
