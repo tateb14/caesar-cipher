@@ -40,3 +40,5 @@ def decode(message, key):#tate
     #according to the message and the key
     #and decodes it
     pass
+
+main()
