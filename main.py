@@ -2,7 +2,7 @@ def main(): #tate
     #accepts no arguments
     #it runs the ceasar cipher
     #and calls programs acordingly
-    
+
     # run shift programs
     shift = get_shift()
     message = get_message()
@@ -120,14 +120,18 @@ def encode(message, key):#henry
     #according to the message and the key
     #and encodes it
     
+    
     #variable
     string = ''
     
     #start loop
-    for letter in key:
-        key.get(letter)
-        string += 'blah'
-        
+    for letter in message:
+        #get the key associated with the value
+        new_letter = key.get(letter)
+        print(new_letter)
+        #add it to the string
+        string += new_letter
+    #print it
     print(string)
         
         
