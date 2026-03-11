@@ -6,11 +6,11 @@ def main(): #tate
     # run shift programs
     shift = get_shift()
     message = get_message()
-    encode = choose_option()
+    encode_bool = choose_option()
     key = create_key(shift)
     
     # If encode return is true...
-    if encode == True:
+    if encode_bool == True:
         encode(message, key)
     else:
         decode(message, key)
@@ -45,17 +45,17 @@ def choose_option():#tate
     #2 to decode
     #it then returns it
     
-    encode = False
+    encode_bool = False
     
     option = int(input("Choose '1' to encode or '2' to decode: "))
     
-    while option != 1 or option != 2:
+    while option != 1 and option != 2:
         option = input("INVALID INPUT: Choose '1' to encode or '2' to decode: ")
     
     if option == 1:
-        encode = True
+        encode_bool = True
     
-    return encode
+    return encode_bool
 
 def get_message():#henry
     #accepts no arguemtns
