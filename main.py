@@ -74,40 +74,44 @@ def create_key(shift): #tate
     #and creates a object according to the shift
     import string
     key = {}
-    count = 1
+    count = 0
     uppercase = {}
     lowercase = {}
     
     # create uppercase dictionary
     for letter in string.ascii_uppercase:
-        uppercase[letter] = count
+        uppercase[count] = letter
         count += 1
         
         
     #reset count
-    count = 1
+    count = 0
     for letter in string.ascii_lowercase:
-        lowercase[letter] = count
+        lowercase[count] = letter
         count += 1
         
-    count = 1
+    count = 0
     
     #handle upper
-    for letter in uppercase:
-        value = uppercase[letter]
-        value = value + shift
-        if value > 26:
-            value = value % shift
-        
-        key[letter] = value
+    for index in uppercase:
+        code_letter = (index + shift) % 26
+        if code_letter == 0:
+            code_letter += 1
+#         for k, v in uppercase.items():
+#             if v == value:
+#                 code_letter = k
+        key[uppercase[index]] = uppercase[code_letter]
     # handle lowercase key
-    for letter in lowercase:
-        value = lowercase[letter]
-        value = value + shift
-        if value > 26:
-            value = value % shift
-        
-        key[letter] = value
+    count = 0
+    for index in lowercase:
+        code_letter = (index + shift) % 26
+        if code_letter == 0:
+            code_letter += 1
+#         for k, v in uppercase.items():
+#             if v == value:
+#                 code_letter = k
+
+        key[lowercase[index]] = lowercase[code_letter]
     
     return key
 
