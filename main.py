@@ -96,18 +96,12 @@ def create_key(shift): #tate
     for index in uppercase:
         code_letter = (index + shift) % 26
 
-#         for k, v in uppercase.items():
-#             if v == value:
-#                 code_letter = k
         key[uppercase[index]] = uppercase[code_letter]
     # handle lowercase key
     count = 0
     for index in lowercase:
         code_letter = (index + shift) % 26
 
-#         for k, v in uppercase.items():
-#             if v == value:
-#                 code_letter = k
 
         key[lowercase[index]] = lowercase[code_letter]
     
@@ -140,9 +134,7 @@ def decode(message, key):#tate
     decoded_message_list = []
     for letter in message:
         for k, v in key.items():
-            print(key)
             if letter == k:
-                print(decoded_message_list)
                 decoded_message_list.append(v)
             elif letter == " ":
                 decoded_message_list.append(" ")
