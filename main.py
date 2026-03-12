@@ -95,8 +95,7 @@ def create_key(shift): #tate
     #handle upper
     for index in uppercase:
         code_letter = (index + shift) % 26
-        if code_letter == 0:
-            code_letter += 1
+
 #         for k, v in uppercase.items():
 #             if v == value:
 #                 code_letter = k
@@ -105,8 +104,7 @@ def create_key(shift): #tate
     count = 0
     for index in lowercase:
         code_letter = (index + shift) % 26
-        if code_letter == 0:
-            code_letter += 1
+
 #         for k, v in uppercase.items():
 #             if v == value:
 #                 code_letter = k
@@ -138,6 +136,18 @@ def decode(message, key):#tate
     #it accepts message and key
     #according to the message and the key
     #and decodes it
-    pass
+    
+    decoded_message_list = []
+    for letter in message:
+        for k, v in key.items():
+            print(key)
+            if letter == k:
+                print(decoded_message_list)
+                decoded_message_list.append(v)
+            elif letter == " ":
+                decoded_message_list.append(" ")
+    decoded_message = "".join(decoded_message_list)
+    print(decoded_message)
+    return decoded_message
 
 main()
