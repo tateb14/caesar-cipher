@@ -8,7 +8,6 @@ def main(): #tate
     message = get_message()
     encode_bool = choose_option()
     key = create_key(shift)
-    
     # If encode return is true...
     if encode_bool == True:
         encode(message, key)
@@ -123,13 +122,13 @@ def encode(message, key):#henry
     
     #variable
     string = ''
-    
+    message = message.replace(' ', '')
     #start loop
     for letter in message:
         #get the key associated with the value
-        new_letter = key.get(letter)
-        print(new_letter)
+        new_letter = key[letter]
         #add it to the string
+        
         string += new_letter
     #print it
     print(string)
